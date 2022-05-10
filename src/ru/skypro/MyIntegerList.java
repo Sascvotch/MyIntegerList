@@ -62,7 +62,7 @@ public class MyIntegerList implements IntegerList {
             }
             myArrayList[j] = temp;
         }
-      //  System.out.println("start1sortInsertion " + (System.currentTimeMillis() - start1));
+        //  System.out.println("start1sortInsertion " + (System.currentTimeMillis() - start1));
         // System.out.println(myArrayList.toString());
     }
 

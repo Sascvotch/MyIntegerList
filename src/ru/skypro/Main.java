@@ -8,7 +8,6 @@ public class Main {
         myIntegerList = myIntegerList.generateRandomArray(100000);
 
         MyIntegerList arrSortInsertion = new MyIntegerList(0);
-
         arrSortInsertion = arrSortInsertion.copy(myIntegerList);
 
         long start3 = System.currentTimeMillis();
