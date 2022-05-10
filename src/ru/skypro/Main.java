@@ -1,38 +1,36 @@
 package ru.skypro;
 
-import java.util.Arrays;
-import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) throws MyIntegerList.MyException {
-        MyIntegerList otherList = new MyIntegerList();
-        List<Integer> listFromInteger = Arrays.asList(0, 1, 2, 3, 4);
-        otherList.toArray(listFromInteger);
+        MyIntegerList myIntegerList = new MyIntegerList(0);
+        myIntegerList = myIntegerList.generateRandomArray(100000);
 
-        MyIntegerList myIntegerList = new MyIntegerList();
-        myIntegerList.add(0);
-        myIntegerList.add(1);
-        myIntegerList.add(2);
-        myIntegerList.add(8);
-        myIntegerList.remove(1);
-        myIntegerList.add(1, 3);
-        myIntegerList.set(2, 4);
-        myIntegerList.equals(otherList);
-        myIntegerList.equals(Arrays.asList(6, 3, 4));
-        myIntegerList.equals(Arrays.asList(6, 3));
-        myIntegerList.size();
-        myIntegerList.remove(3);
-        myIntegerList.remove(1);
-        myIntegerList.contains(6);
-        myIntegerList.contains(8);
-        myIntegerList.indexOf(0);
-        myIntegerList.indexOf(8);
-        myIntegerList.lastIndexOf(3);
-        myIntegerList.get(0);
-        myIntegerList.clear();
-        myIntegerList.isEmpty();
-        myIntegerList.toArray();
+        MyIntegerList arrSortInsertion = new MyIntegerList(0);
+
+        arrSortInsertion = arrSortInsertion.copy(myIntegerList);
+
+        long start3 = System.currentTimeMillis();
+        arrSortInsertion.sortInsertion();
+        System.out.println("время сорт инсекшен" + (System.currentTimeMillis() - start3));
+        System.out.println(myIntegerList.BinarySearch(myIntegerList, 143345));
+
+        //MyIntegerList arrSortBuble = new MyIntegerList(0);
+        //MyIntegerList arrSortSelection = new MyIntegerList(0);
+        //arrSortBuble = arrSortBuble.copy(myIntegerList);
+        //arrSortSelection = arrSortSelection.copy(myIntegerList);
+        // long start1 = System.currentTimeMillis();
+        // arrSortBuble.sortBubble();
+        //System.out.println("время сорт бабл"+(System.currentTimeMillis() - start1));
+        //System.out.println("arrSortBuble" + arrSortBuble.toString());
+        //long start2= System.currentTimeMillis();
+        // arrSortSelection.sortSelection();
+        //    System.out.println("время сорт селекшен"+(System.currentTimeMillis() - start2));
+        // System.out.println("arrSortSelection" + arrSortSelection.toString());
+
 
     }
+
+
 }

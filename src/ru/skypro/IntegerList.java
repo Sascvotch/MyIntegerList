@@ -1,9 +1,9 @@
 package ru.skypro;
 
-import java.util.Arrays;
-import java.util.List;
-
 public interface IntegerList {
+
+
+
 
     // Добавление элемента.
     // Вернуть добавленный элемент
